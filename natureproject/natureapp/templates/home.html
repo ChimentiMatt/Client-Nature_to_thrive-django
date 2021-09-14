@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="home">Home</p>
+    <div id="app"> 
+        <button v-on:click="Home">Chagnge color</button>
+        [[sayHi]]
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        let app = new Vue({
+            delimiters: ['[[', ']]'],
+            el: '#app',
+
+            data: {
+                sayHi: 'Hello from Vue!'
+            },
+            methods: {
+                Home: function() {
+                    document.getElementById('home').style.color = 'red'
+                },
+                log: function() {
+                    alert('Lisa sucks at life')
+                }
+            },
+            // mounted() {
+            //     log: function() {
+            //         console.log('Lisa sucks at life')
+            //     }
+            // }
+        })
+        // app.log()
+        // app.home()
+
+    </script>
+</body>
+</html>
