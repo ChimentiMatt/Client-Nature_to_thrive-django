@@ -10,5 +10,7 @@ class EventView(ListView):
     template_name = 'events.html'
 
 def HomeView(request):
+    return render(request, 'home.html')
 
-    return render(request, "home.html")
+def HeaderView(request):
+    return render(request, 'header.html')

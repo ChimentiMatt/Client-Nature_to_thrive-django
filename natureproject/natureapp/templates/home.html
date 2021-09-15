@@ -1,17 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'natureapp/main.css' %}">
     <title>Document</title>
 </head>
+
 <body>
+    <!-- {% block header %}
+
+    {% endblock header %} -->
+
+    <div id="headerContainer">
+        <div id="headerLeft">
+            <img id="logo" src='../static/natureapp/logoEdit.png'>
+            <p id="headerName">NATURE TO THRIVE</p>         
+        </div>
+        <div id="headerMiddle">
+            <p>ABOUT</p>
+            <p>OUTDOOR-ECOTHERAPY</p>
+            <p>PSYCHOTHERAPY</p>
+            <p>EVENTS</p>
+        </div>
+        <div id="headerRight">
+
+            <div id="headerRightPhone">
+                (503) 964-9999
+            </div>
+        </div>
+    
+    </div>
+
+
     <p id="home">Home</p>
-    <div id="app"> 
+    <div id="app">
         <button v-on:click="Home">Chagnge color</button>
         [[sayHi]]
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
         let app = new Vue({
@@ -22,10 +52,10 @@
                 sayHi: 'Hello from Vue!'
             },
             methods: {
-                Home: function() {
+                Home: function () {
                     document.getElementById('home').style.color = 'red'
                 },
-                log: function() {
+                log: function () {
                     alert('Lisa sucks at life')
                 }
             },
@@ -40,4 +70,5 @@
 
     </script>
 </body>
+
 </html>
