@@ -88,10 +88,13 @@
 #eventsPage{
     text-align: center;
     background-color: #f3f3f3;
-    height: 90vh;
+
 }
 
 #conatinerPictureTitle{
+    /* height: 5rem; */
+    height: 2rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,8 +109,14 @@
     font-size: 3rem;
 }
 
+#postDate{
+    margin-top: .5rem;
+    margin-left: 1rem;
+    color: gray;
+}
+
 #postContainer{
-    white-space: pre-wrap;
+
     display: flex;
     justify-content: center;
     line-height: 1.5rem;
@@ -130,7 +139,12 @@
 #postTitle{
     font-size: 3rem;
     /* margin-bottom: 1rem; */
+
 }
 
 #postD{
+    /* margin-top: 2rem; */
+    white-space: pre-wrap;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }

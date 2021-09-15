@@ -11,11 +11,10 @@
                     {% comment %} <img src="{% static "natureapp/media/cat.jpg" %}"></div> {% endcomment %}
                     <div>
                         <div id="conatinerPictureTitle">
-                           <img id="eventImg" src="{% static "natureapp/media/cat.jpg" %}">
+                           <img id="eventImg" src="{{ post.image.url }}">
                             <p id="postTitle">{{ post.title }} </p> 
-                            <p>{{ post.event_date }}</p>
+                            <p id="postDate">{{ post.event_date }}</p>
                         </div>
-                        
                         <p id="postD">{{ post.body }}</p>
                     
                     </div>

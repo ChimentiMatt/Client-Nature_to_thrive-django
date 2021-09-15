@@ -1,5 +1,7 @@
 from django.urls import path
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf import settings
+from django.conf.urls.static import static
+
 from .views import EventView, HomeView, HeaderView, AboutView
 
 urlpatterns = [
@@ -7,6 +9,5 @@ urlpatterns = [
     path('header/', HeaderView),
     path('about/', AboutView, name="about"),
     path('events/', EventView.as_view(), name="events"),
-] 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += staticfiles_urlpatterns()
