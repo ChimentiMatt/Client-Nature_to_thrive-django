@@ -87,21 +87,43 @@
 /* Events Page ----------------------------------------------------------------------------------------------- */
 #eventsPage{
     text-align: center;
+    background-color: #f3f3f3;
+    height: 90vh;
 }
 
 #eventsPageTitle{
-    margin-top: 5rem;
+    padding-top: 5rem;
     font-size: 3rem;
 }
 
 #postContainer{
+    white-space: pre-wrap;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5rem;
+}
 
+#innerPost{
+    display: flex;
+    border: 1px solid red;
+    width: 70vw;
+    background: white;
+    padding: 1rem;
+    margin-top: 2.5rem;
+    border-radius: 1rem 1rem;
+}   
+#postImgContaiener{
+    height: 100%;
+    background: wheat;
+    width: 50rem;
 }
 
 #postTitle{
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 #postD{
-
+    width: 50rem;
+    border: 1px solid blue;
 }

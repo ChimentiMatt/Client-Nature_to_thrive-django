@@ -5,8 +5,16 @@
         <p id="eventsPageTitle">UPCOMING EVENTS</p>
         {% for post in object_list %}
             <div id="postContainer">
-                <p id="postTitle">{{ post.title }}:</p>
-                <p id="postD">{{ post.body }}</p>
+                <div id="innerPost">
+                    <div id="postImgContaiener"> d</div>
+                    <div>
+                        <p id="postTitle">{{ post.title }} </p> 
+                        <p>{{ post.event_date }}</p>
+                    
+                            <p id="postD">{{ post.body }}</p>
+                    
+                    </div>
+                </div>
             </div>
 
         {% endfor %}
