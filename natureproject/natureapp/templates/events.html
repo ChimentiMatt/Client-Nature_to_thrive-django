@@ -6,12 +6,17 @@
         {% for post in object_list %}
             <div id="postContainer">
                 <div id="innerPost">
-                    <div id="postImgContaiener"> d</div>
+                    {% comment %} <div id="postImgContaiener">  {% endcomment %}
+                    {% load static %} 
+                    {% comment %} <img src="{% static "natureapp/media/cat.jpg" %}"></div> {% endcomment %}
                     <div>
-                        <p id="postTitle">{{ post.title }} </p> 
-                        <p>{{ post.event_date }}</p>
-                    
-                            <p id="postD">{{ post.body }}</p>
+                        <div id="conatinerPictureTitle">
+                           <img id="eventImg" src="{% static "natureapp/media/cat.jpg" %}">
+                            <p id="postTitle">{{ post.title }} </p> 
+                            <p>{{ post.event_date }}</p>
+                        </div>
+                        
+                        <p id="postD">{{ post.body }}</p>
                     
                     </div>
                 </div>

@@ -91,6 +91,16 @@
     height: 90vh;
 }
 
+#conatinerPictureTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#eventImg{
+    height: 5rem;
+}
+
 #eventsPageTitle{
     padding-top: 5rem;
     font-size: 3rem;
@@ -105,25 +115,22 @@
 
 #innerPost{
     display: flex;
-    border: 1px solid red;
+    flex-direction: column;
     width: 70vw;
     background: white;
-    padding: 1rem;
+    padding: 0rem 2rem 0 2rem;
     margin-top: 2.5rem;
     border-radius: 1rem 1rem;
 }   
 #postImgContaiener{
-    height: 100%;
     background: wheat;
-    width: 50rem;
+    width: 20rem;
 }
 
 #postTitle{
     font-size: 3rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 #postD{
-    width: 50rem;
-    border: 1px solid blue;
 }
