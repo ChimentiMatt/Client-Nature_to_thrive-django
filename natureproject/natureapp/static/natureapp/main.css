@@ -33,6 +33,11 @@
 
 #headerName{
     font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+#headerName:hover{
+    font-weight: bold;
 }
 
 #headerMiddle{
@@ -40,7 +45,13 @@
    justify-content: space-between;
    width: 33.3%;
    text-decoration: none;
-
+}
+#headerMiddle a {
+    text-decoration: none;
+    color: black;
+}
+#headerMiddle a:hover {
+    font-weight: bold;
 }
 
 .headerLinks{
@@ -68,4 +79,29 @@
     text-decoration: none;
     color: black;
     margin-right: 1rem;
+}
+
+
+
+
+/* Events Page ----------------------------------------------------------------------------------------------- */
+#eventsPage{
+    text-align: center;
+}
+
+#eventsPageTitle{
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+#postContainer{
+
+}
+
+#postTitle{
+    font-size: 2rem;
+}
+
+#postD{
+
 }

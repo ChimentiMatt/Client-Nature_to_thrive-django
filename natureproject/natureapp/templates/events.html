@@ -1,7 +1,14 @@
-<h1>Hi</h1>
+{% extends 'home.html' %}
 
-{% for post in object_list %}
-    {{ post.title }}
-    {{ post.body }}
+{% block events %}
+    <div id="eventsPage">
+        <p id="eventsPageTitle">UPCOMING EVENTS</p>
+        {% for post in object_list %}
+            <div id="postContainer">
+                <p id="postTitle">{{ post.title }}:</p>
+                <p id="postD">{{ post.body }}</p>
+            </div>
 
-{% endfor %}
+        {% endfor %}
+    </div>
+{% endblock events %}

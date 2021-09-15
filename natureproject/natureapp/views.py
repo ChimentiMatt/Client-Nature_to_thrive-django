@@ -14,3 +14,6 @@ def HomeView(request):
 
 def HeaderView(request):
     return render(request, 'header.html')
+
+def AboutView(request):
+    return render(request, 'about.html')
