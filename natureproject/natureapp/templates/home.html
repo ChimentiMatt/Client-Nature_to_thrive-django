@@ -74,8 +74,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+        
 
+    <script src="https://cdn.jsdelivr.net/npm/vue2-smooth-scroll@1.5.1/dist/vue-smooth-scroll.min.js"></script>
     <script>
+
         let app = new Vue({
             delimiters: ['[[', ']]'],
             el: '#app',
@@ -106,8 +109,12 @@
                         this.formOpen = true
                     }
                     // gsap.to('#popOutForm', {color: 'red'}) 
-
                 },
+                scrollTo: function(id) {
+                    document.getElementById('headerName').style.color = 'red'
+                    console.log('yeet')
+                }
+                
             },
             // mounted() {
             //     log: function() {

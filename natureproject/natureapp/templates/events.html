@@ -5,28 +5,38 @@
     <div id="eventsPage">
         <p id="eventsPageTitle">UPCOMING EVENTS</p>
         {% for post in object_list %}
+            <section id="id{{post.id}}"></section>
             <div id="postContainer">
                 <div id="innerPost">
 
                     {% load static %} 
                     <div>
                         <div id="conatinerPictureTitle">
-                           <img id="eventImg" src="{{ post.image.url }}">
                             <p id="postTitle">{{ post.title }} </p> 
                             <p id="postDate">{{ post.event_date }}</p>
                         </div>
                         <p id="postD">{{ post.summary }}</p>
-                     
+                        <img id="eventImg" src="{{ post.image.url }}">
+                        <br>
                         <a  id="eventButton" href="{% url 'event_details' post.pk %}">
-                        SIGN UP
-                        
+                            SIGN UP
                         </a>
                         {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
-                       
                     </div>
                 </div>
             </div>
 
+
+
         {% endfor %}
+            <div id="currentEvents">
+                <p id="currentEventsHeader">Current Events</p>
+                {% for post in object_list %}
+
+                <a href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a>
+
+                {% endfor %}
+    
+            </div>
     </div>
 {% endblock events %}
