@@ -13,24 +13,36 @@
 <body>
     <div id="app">
 
-    <div id="headerContainer">
-        <div id="headerLeft">
-            <a href="{% url 'home' %}"><img id="logo" src='../static/natureapp/logoEdit.png'></a>
-            <a id="headerName" href="{% url 'home' %}">NATURE TO THRIVE</a>         
+        <div id="headerContainer">
+            <div id="headerLeft">
+                <a href="{% url 'home' %}"><img id="logo" src='../static/natureapp/logoEdit.png'></a>
+                <a id="headerName" href="{% url 'home' %}">NATURE TO THRIVE</a>         
 
-        </div>
-        <div id="headerMiddle">
-            <a href="{% url 'about' %}">ABOUT</a>
-            <a href="{% url 'about' %}">OUTDOOR-ECOTHERAPY</a>
-            <a href="{% url 'about' %}">PSYCHOTHERAPY</a>
-            <a href="{% url 'events' %}">EVENTS</a>
-        </div>
-        <div id="headerRight">
-            <div id="headerRightPhone">
-                (503) 964-9999
+            </div>
+            <div id="headerMiddle">
+                <a href="{% url 'about' %}">ABOUT</a>
+                <a href="{% url 'about' %}">OUTDOOR-ECOTHERAPY</a>
+                <a href="{% url 'about' %}">PSYCHOTHERAPY</a>
+                <a href="{% url 'events' %}">EVENTS</a>
+            </div>
+            <div id="headerRight">
+                <div id="headerRightPhone">
+                    (503) 964-9999
+                </div>
             </div>
         </div>
-    </div>
+        
+        {% if request.path == '/' %}
+            <div id="landingContainer">
+                <div id="landingTextContainer">
+                    <p id="landingName">NATURE TO THRIVE</p>
+                    <p id="landingLicensed">LICENSED ECOTHERAP</p>
+                    <p id="landingAbout">
+                        ABOUT MONIKA
+                    </p>
+                </div>
+            </div>
+        {% endif %}
 
     {% comment %} <p id="home">Home</p>
     <div id="app">
@@ -38,14 +50,14 @@
         [[sayHi]]
     </div> {% endcomment %}
 
-    {% block about %}
-    {% endblock %}
-    
-    {% block events %}
-    {% endblock %}
+        {% block about %}
+        {% endblock %}
+        
+        {% block events %}
+        {% endblock %}
 
-    {% block event_details %}
-    {% endblock %}
+        {% block event_details %}
+        {% endblock %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>

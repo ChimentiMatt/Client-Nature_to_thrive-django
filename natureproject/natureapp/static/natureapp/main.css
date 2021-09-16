@@ -82,7 +82,55 @@
 }
 
 
+/* Landing Body ---------------------------------------------------------------------------------------------------------- */
 
+#landingContainer{
+    height: 90vh;
+    width: 100VW;
+    background: url("./nature3_edit.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+}
+#landingTextContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+#landingName{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#landingLicensed{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold
+}
+
+#landingAbout{
+    font-size: 1.5rem;
+    border: none;
+    padding: .3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: .2rem .2rem .2rem .2rem;
+    text-decoration: none;
+    color: white;
+
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+#landingAbout:hover{
+    background: rgba(0, 0, 0, 0.10);    
+    color: white;
+}
 
 /* Events Page (Plural)----------------------------------------------------------------------------------------------- */
 #eventsPage{
