@@ -89,7 +89,7 @@
     width: 100vw;
     text-align: center;
     background-color: #f3f3f3;
-
+    min-height: 90vh;
 }
 
 #conatinerPictureTitle{
@@ -158,33 +158,6 @@
     color: white;
 }
 
-#eventFormContainer{
-    display: flex;
-    justify-content: center;
-}
-
-#eventFormInner{
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-}
-#eventFormInner input{
-    padding: .5rem 1rem .5rem 1rem;
-    font-size: 1.5rem;
-}
-
-#eventFormInner label{
-    text-align: start;
-    margin-top: 1rem;
-}
-#eventFormInner button{
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
-#formLabel{
-
-}
 
 
 /* Event Page ------------------------------------------------------------------------------- */
@@ -205,4 +178,47 @@
 #eventBody{
     margin-top: 1rem;
     white-space: pre-wrap;
+}
+
+
+
+#eventFormContainer{
+    margin-top: 2.5rem;
+    display: flex; 
+    flex-direction: column;
+    /* background: rgb(226, 226, 226); */
+}
+
+#eventFormInner{
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+#formInput{
+    padding: .5rem 1rem .5rem 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#eventFormInner label{
+    text-align: start;
+}
+
+#eventFormInner button{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#formRight{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    /* flex-direction: column; */
+    margin-left: 2rem;
+}
+
+#eventFormContainer button{
+    width: 43rem;
+    padding: 1rem;
 }
