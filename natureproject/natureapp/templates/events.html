@@ -15,26 +15,18 @@
                             <p id="postTitle">{{ post.title }} </p> 
                             <p id="postDate">{{ post.event_date }}</p>
                         </div>
-                        <p id="postD">{{ post.body }}</p>
+                        <p id="postD">{{ post.summary }}</p>
                      
-                        <a href="{% url 'event_details' post.pk %}">
-                        cats
+                        <a  id="eventButton" href="{% url 'event_details' post.pk %}">
+                        SIGN UP
                         
                         </a>
-                        <button v-on:click="popOutForm()">Submit</button>
+                        {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
                        
                     </div>
                 </div>
             </div>
-            <div id="popOutForm">
 
-                <button id="popOutClose" v-on:click="popOutForm()">X</button>
-
-                <p id="postTitle">{{ post.title }} </p> 
-                <p id="postDate">{{ post.event_date }}</p>
-           
-            </div>
-        <div id="formForegroundBlurr"></div>
         {% endfor %}
     </div>
 {% endblock events %}

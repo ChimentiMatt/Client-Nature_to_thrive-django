@@ -84,7 +84,7 @@
 
 
 
-/* Events Page ----------------------------------------------------------------------------------------------- */
+/* Events Page (Plural)----------------------------------------------------------------------------------------------- */
 #eventsPage{
     width: 100vw;
     text-align: center;
@@ -120,6 +120,7 @@
     display: flex;
     justify-content: center;
     line-height: 1.5rem;
+
 }
 
 #innerPost{
@@ -129,6 +130,7 @@
     background: white;
     padding: 0rem 2rem 0 2rem;
     margin-top: 2.5rem;
+    padding-bottom: 2.5rem;
     border-radius: 1rem 1rem;
 }   
 #postImgContaiener{
@@ -148,24 +150,14 @@
     margin-top: 2rem;
 }
 
+#eventButton{
+    padding: .5rem 1rem .5rem 1rem;
+    background: rgb(25, 100, 25);
+    border-radius: .5rem;
+    text-decoration: none;
+    color: white;
+}
 
-#popOutForm{
-    top: 10rem;
-    position: fixed;
-    display: none;
-    height: 35rem;
-    width: 60vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    background: #b1ffa6;
-    z-index: 2;
-}
-#popOutClose{
-    position: relative;
-    top: 1rem;
-    right: 1rem;
-    float: right;
-}
 #eventFormContainer{
     display: flex;
     justify-content: center;
@@ -194,12 +186,23 @@
 
 }
 
-#formForegroundBlurr{
-    position: absolute;
-    display: none;
-    z-index: 1;
-    top: 0%;
-    height: 90vh;
-    width: 100vw;
-    background: rgba(26, 26, 26, 0.514);
+
+/* Event Page ------------------------------------------------------------------------------- */
+#eventPage{
+    margin-top: 2rem;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+#eventTitle{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#eventDate{
+    text-align: center;
+}
+#eventBody{
+    margin-top: 1rem;
+    white-space: pre-wrap;
 }

@@ -4,6 +4,7 @@ from django.utils.timezone import now
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
+    summary = models.CharField(max_length=255, default='See more by clicking on the link below')
     body = models.TextField()
     event_date = models.DateTimeField(default=now, blank=True)
     image = models.ImageField(upload_to='images/', default='images/cat.jpg')
