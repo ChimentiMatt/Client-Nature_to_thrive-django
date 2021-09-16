@@ -86,6 +86,7 @@
 
 /* Events Page ----------------------------------------------------------------------------------------------- */
 #eventsPage{
+    width: 100vw;
     text-align: center;
     background-color: #f3f3f3;
 
@@ -105,7 +106,7 @@
 }
 
 #eventsPageTitle{
-    padding-top: 5rem;
+    padding-top: 2.5rem;
     font-size: 3rem;
 }
 
@@ -116,7 +117,6 @@
 }
 
 #postContainer{
-
     display: flex;
     justify-content: center;
     line-height: 1.5rem;
@@ -139,7 +139,6 @@
 #postTitle{
     font-size: 3rem;
     /* margin-bottom: 1rem; */
-
 }
 
 #postD{
@@ -147,4 +146,60 @@
     white-space: pre-wrap;
     margin-bottom: 2rem;
     margin-top: 2rem;
+}
+
+
+#popOutForm{
+    top: 10rem;
+    position: fixed;
+    display: none;
+    height: 35rem;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    background: #b1ffa6;
+    z-index: 2;
+}
+#popOutClose{
+    position: relative;
+    top: 1rem;
+    right: 1rem;
+    float: right;
+}
+#eventFormContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#eventFormInner{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+#eventFormInner input{
+    padding: .5rem 1rem .5rem 1rem;
+    font-size: 1.5rem;
+}
+
+#eventFormInner label{
+    text-align: start;
+    margin-top: 1rem;
+}
+#eventFormInner button{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#formLabel{
+
+}
+
+#formForegroundBlurr{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    top: 0%;
+    height: 90vh;
+    width: 100vw;
+    background: rgba(26, 26, 26, 0.514);
 }

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="app">
     <!-- {% block header %}
 
     {% endblock header %} -->
@@ -46,22 +47,43 @@
     {% block events %}
     {% endblock %}
 
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
     <script>
         let app = new Vue({
             delimiters: ['[[', ']]'],
             el: '#app',
 
             data: {
-                sayHi: 'Hello from Vue!'
+                formOpen: true,
+
+                sayHi: 'Hello from Vue!',
             },
             methods: {
-                Home: function () {
+                Home: function() {
                     document.getElementById('home').style.color = 'red'
                 },
-                log: function () {
+                log: function() {
                     alert('Lisa sucks at life')
-                }
+                },
+                popOutForm: function() {
+                    if (this.formOpen){
+                        document.getElementById('popOutForm').style.display = 'block'
+                        document.getElementById('formForegroundBlurr').style.display = 'block'
+                        document.getElementById('eventsPage').style.position = 'fixed'
+                        this.formOpen = false
+                    }
+                    else {
+                        document.getElementById('popOutForm').style.display = 'none' 
+                        document.getElementById('formForegroundBlurr').style.display = 'none'
+                        document.getElementById('eventsPage').style.position = 'static'
+                        this.formOpen = true
+                    }
+                    // gsap.to('#popOutForm', {color: 'red'}) 
+
+                },
             },
             // mounted() {
             //     log: function() {
