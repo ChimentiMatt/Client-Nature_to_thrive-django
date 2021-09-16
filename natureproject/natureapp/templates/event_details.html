@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+
+{% block event_details %}
+    <p id="postTitle">{{ post.title }} </p> 
+    <p id="postDate">{{ post.event_date }}</p>
+     <form id='eventFormContainer'>
+                <div id='eventFormInner'>
+                    <label id="formLabel">FIRST NAME</label>
+                    <input></input>
+      
+                    <label id="formLabel">LAST NAME</label>
+                    <input></input>
+          
+                    <label id="formLabel">EMAIL</label>
+                    <input type="email"></input>
+             
+                    <label id="formLabel">PHONE</label>
+                    <input type='tel'></input>
+
+                    <label id="formLabel" >EVENT</label>
+                    <input type='tel' value="{{ post.title }}" disabled></input>
+
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>             
+{% endblock event_details %}

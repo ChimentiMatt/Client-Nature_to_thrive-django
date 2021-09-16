@@ -17,6 +17,10 @@
                         </div>
                         <p id="postD">{{ post.body }}</p>
                      
+                        <a href="{% url 'event_details' post.pk %}">
+                        cats
+                        
+                        </a>
                         <button v-on:click="popOutForm()">Submit</button>
                        
                     </div>
@@ -24,31 +28,12 @@
             </div>
             <div id="popOutForm">
 
-                    <button id="popOutClose" v-on:click="popOutForm()">X</button>
+                <button id="popOutClose" v-on:click="popOutForm()">X</button>
 
                 <p id="postTitle">{{ post.title }} </p> 
                 <p id="postDate">{{ post.event_date }}</p>
-            <form id='eventFormContainer'>
-                <div id='eventFormInner'>
-                    <label id="formLabel">FIRST NAME</label>
-                    <input></input>
-      
-                    <label id="formLabel">LAST NAME</label>
-                    <input></input>
-          
-                    <label id="formLabel">EMAIL</label>
-                    <input type="email"></input>
-             
-                    <label id="formLabel">PHONE</label>
-                    <input type='tel'></input>
-
-                    <label id="formLabel" >EVENT</label>
-                    <input type='tel'></input>
-
-                    <button type="submit">SUBMIT</button>
-                </div>
-            </form>             
-        </div>
+           
+            </div>
         <div id="formForegroundBlurr"></div>
         {% endfor %}
     </div>
