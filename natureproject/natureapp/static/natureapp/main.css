@@ -152,7 +152,7 @@
 
 #eventButton{
     padding: .5rem 1rem .5rem 1rem;
-    background: rgb(25, 100, 25);
+    background: #1EAB86;
     border-radius: .5rem;
     text-decoration: none;
     color: white;
@@ -165,6 +165,7 @@
     margin-top: 2rem;
     margin-left: 20vw;
     margin-right: 20vw;
+
 }
 
 #eventTitle{
@@ -185,6 +186,7 @@
 #eventFormContainer{
     margin-top: 2.5rem;
     display: flex; 
+    align-items: center;
     flex-direction: column;
     /* background: rgb(226, 226, 226); */
 }
@@ -198,7 +200,14 @@
     padding: .5rem 1rem .5rem 1rem;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
 }
+
+#formInput:focus{
+    outline-width: 0;
+}
+
 
 #eventFormInner label{
     text-align: start;
@@ -221,4 +230,8 @@
 #eventFormContainer button{
     width: 43rem;
     padding: 1rem;
+    border: none;
+    color: white;
+    background-color: #1EAB86;
+    border-radius: .5rem;
 }
