@@ -73,6 +73,12 @@
 #headerRightPhone{
     margin-top: .5rem;
     margin-right: 1.5rem;
+    padding: .5rem;
+}
+
+#headerRightPhone p{
+
+    padding: .2rem;
 }
 
 .headerLinksRight{
@@ -131,6 +137,46 @@
     background: rgba(0, 0, 0, 0.10);    
     color: white;
 }
+
+
+/* About section ----------------------------------------------------------------------------------------------------- */
+
+
+#aboutPage{
+    background: rgba(0, 0, 0, 0.05);
+    height: 100vh;
+}
+
+
+#aboutPageContextArea{
+    display: flex;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+#aboutPageTitle{
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 3rem;
+}
+#aboutLeft{
+    width: 49%;
+    margin-right: 1%;
+
+}
+
+#aboutRight{
+    display: flex;
+    width: 49%;
+    margin-left: 1%;
+    margin-top: 3rem;
+}
+
+#MonikaAboutImg{
+    width: 100%;
+}
+
 
 /* Events Page (Plural)----------------------------------------------------------------------------------------------- */
 #eventsPage{
@@ -280,6 +326,13 @@
     padding: 1rem;
     border: none;
     color: white;
-    background-color: #1EAB86;
+    background-color: rgb(30, 171, 134);
     border-radius: .5rem;
+}
+
+/* Footer ------------------------------------------------------------------------------------------------------- */
+#footer{
+    height: 5rem;
+    background-color: rgb(0, 66, 41);
+    
 }

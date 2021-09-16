@@ -13,6 +13,7 @@
 <body>
     <div id="app">
 
+        {% comment %} HEADER SECTION {% endcomment %}
         <div id="headerContainer">
             <div id="headerLeft">
                 <a href="{% url 'home' %}"><img id="logo" src='../static/natureapp/logoEdit.png'></a>
@@ -20,14 +21,15 @@
 
             </div>
             <div id="headerMiddle">
-                <a href="{% url 'about' %}">ABOUT</a>
+                <a href="{% url 'events' %}">EVENTS</a>
                 <a href="{% url 'about' %}">OUTDOOR-ECOTHERAPY</a>
                 <a href="{% url 'about' %}">PSYCHOTHERAPY</a>
-                <a href="{% url 'events' %}">EVENTS</a>
+                <a href="{% url 'about' %}">ABOUT</a>
             </div>
             <div id="headerRight">
                 <div id="headerRightPhone">
-                    (503) 964-9999
+                    <p>(503) 964-9999</p>
+                    <p>monikatippie@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -42,13 +44,18 @@
                     </p>
                 </div>
             </div>
+            <div id="aboutPage">
+                <p id="aboutPageTitle">ABOUT MONIKA</p>
+                <div id="aboutPageContextArea"> 
+                    <div id="aboutLeft">
+                        <img id ="MonikaAboutImg" src='../static/natureapp/MonikaHeadshot.jpg'></img>
+                    </div>
+                    <div id="aboutRight">
+                        <p>Monika likes cats SLDKFSDLFK Sflknfsdlkf asdlf sad;fl nasf asd;lf kajsdf l;as a;jfsadasfsadf ksadkfsadf saf asdk;f hsadkjfhd skjfhasdkf sadkf jasdkfj hasdkf hasdk;f hasdkfj asdkf jasd kfjas dfk;jas df ;ksajd</p>
+                    </div>
+                </div>             
+            </div>
         {% endif %}
-
-    {% comment %} <p id="home">Home</p>
-    <div id="app">
-        <button v-on:click="Home">Chagnge color</button>
-        [[sayHi]]
-    </div> {% endcomment %}
 
         {% block about %}
         {% endblock %}
@@ -58,6 +65,12 @@
 
         {% block event_details %}
         {% endblock %}
+
+        {% comment %} FOOTER SECTION{% endcomment %}
+        <div id='footer'>
+            <p>@ 2021 Nature To Thrive</p>
+            <p>Monika Tippie</p>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
