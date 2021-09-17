@@ -1,3 +1,6 @@
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -199,10 +202,10 @@
     margin-bottom: 2.5rem;
 }
 
-#eventsPageTitle{
+/* #eventsPageTitle{
     padding-top: 2.5rem;
     font-size: 3rem;
-}
+} */
 
 #postDate{
     margin-top: .5rem;
@@ -251,7 +254,9 @@
     text-decoration: none;
     color: white;
 }
-
+#eventButton:hover{
+    opacity: .8;
+}
 
 
 /* Event Page ------------------------------------------------------------------------------- */
@@ -329,25 +334,34 @@
     background-color: rgb(30, 171, 134);
     border-radius: .5rem;
     height: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 2.5rem;
 }
 
 #currentEvents{
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 10rem;
-    width: 15rem;
-    left: 5rem;
+    top: 8.5rem;
+    width: 21rem;
+    left: 2rem;
     text-align: start;
+    background: white;
+    padding: 1rem;
 }
 
 #currentEventsHeader{
     font-size: 2rem;
     border-bottom: 1px solid black;
 }
-#currentEventsTitle{
+.currentEventsTitle{
     margin-top: .5rem;
+    text-decoration: none;
+    color: black;
+}
 
+.currentEventsTitle:hover{
+    font-weight: bold;
 }
 
 /* Footer ------------------------------------------------------------------------------------------------------- */

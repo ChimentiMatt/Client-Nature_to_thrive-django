@@ -3,7 +3,7 @@
 {% block events %}
 
     <div id="eventsPage">
-        <p id="eventsPageTitle">UPCOMING EVENTS</p>
+        {% comment %} <p id="eventsPageTitle">UPCOMING EVENTS</p> {% endcomment %}
         {% for post in object_list %}
             <section id="id{{post.id}}"></section>
             <div id="postContainer">
@@ -27,16 +27,15 @@
             </div>
 
 
-
         {% endfor %}
             <div id="currentEvents">
-                <p id="currentEventsHeader">Current Events</p>
+                <p id="currentEventsHeader">CURRENT EVENTS</p>
                 {% for post in object_list %}
-
-                <a href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a>
-
-                {% endfor %}
     
+                        <a class="currentEventsTitle" id="section{{forloop.counter0}}" v-on:click="currentSection({{ post.id }}, {{ forloop.counter0 }})" href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a>
+         
+                {% endfor %}
             </div>
+                        <div id='cat'>cat</div>
     </div>
 {% endblock events %}
