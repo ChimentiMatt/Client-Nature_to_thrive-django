@@ -21,8 +21,7 @@
                         </div>
                     </div>
 
-
-                    <p id="postD">{{ post.summary }}</p>
+                    <p id="emphasize">About: </p><p id="postD">{{ post.summary }}</p>
                     <img id="eventImg" src="{{ post.image.url }}">
                     <br>
                     <a  id="eventButton" href="{% url 'event_details' post.pk %}">

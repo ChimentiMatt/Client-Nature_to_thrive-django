@@ -6,22 +6,23 @@
 
 
     <div id="eventPage">
-        <div id="postContainer">
-            <div id="innerPost">
-                {% load static %} 
-                <div id="conatinerPictureTitle">
-                    <p id="postTitle">{{ post.title }} </p> 
-                    
-                    <div id="dateLocation"> 
-                        <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
-                    </div>
-                    <div id="dateLocation">
-                        <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
-                    </div>
+        <a id="eventPageBackBtn" href="{% url 'events' %}">BACK</a>
+        <div id="innerPost">
+            {% load static %} 
+            <div id="conatinerPictureTitle">
+                <p id="postTitle">{{ post.title }} </p> 
+                
+                <div id="dateLocation"> 
+                    <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
                 </div>
-                <p id="postD">{{ post.body }}</p>
+                <div id="dateLocation">
+                    <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
+                </div>
             </div>
+    
+            <p id="emphasize">About: </p><p id="postD">{{ post.body }}</p>
         </div>
+
 
         <form id='eventFormContainer'>
             <div id='eventFormInner'>
@@ -60,6 +61,7 @@
                 <label id="formLabel">DATE</label>
                 <input id="formInput" type='tel' value="{{ post.event_date }}" disabled></input>
             </div> {% endcomment %}
+            <br>
             <button type="submit">SUBMIT</button>
         </form>             
     </div>
