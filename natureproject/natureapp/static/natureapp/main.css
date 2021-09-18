@@ -196,8 +196,8 @@
 #eventsPage{
     width: 100vw;
     text-align: center;
-    background-color: #f3f3f3;
-
+    background-color: steelblue;
+    /* background-color: lightgreen; */
 }
 
 #postContainer{
@@ -211,7 +211,7 @@
     padding: 0rem 2rem 0 2rem;
     margin-top: 2.5rem;
     padding-bottom: 2.5rem;
-    border-radius: 1rem 1rem;
+    border-radius: .5rem;
 }  
 
 #conatinerPictureTitle{
@@ -267,11 +267,13 @@
 }
 
 #eventButton{
-    padding: .5rem 1rem .5rem 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+
     background: #1EAB86;
     border-radius: .5rem;
     text-decoration: none;
     color: white;
+    width: 50rem;
 
 }
 #eventButton:hover{
@@ -371,22 +373,30 @@
     display: flex;
     flex-direction: column;
     top: 8.5rem;
-    width: 12rem;
-    left: 6rem;
+    max-width: 18rem;
+    /* left: 6rem; */
     text-align: start;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
     /* border-top: .5px solid rgba(0, 0, 0, 0.384); */
-
+    background: white;
+    border-radius:  0 .5rem .5rem 0 ;
+    padding-left: 1rem;
+    /* margin-right: 1rem; */
 }
 
 #currentEventsHeader{
     font-size: 2rem;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    margin-left: 1rem;
 }
 .currentEventsTitle{
     margin-top: .5rem;
     text-decoration: none;
-    color: black;
+    color: rgb(17, 17, 17) ;
+    margin-left: 1rem;
+    
 }
 
 .currentEventsTitle:hover{
@@ -400,9 +410,9 @@
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
     #currentEvents{
-        left: 1rem;
+        max-width: 12rem;
     }
 }
 
