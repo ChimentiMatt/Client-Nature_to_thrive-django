@@ -17,7 +17,7 @@
 /* Header Component --------------------------------------------------------------------------------------------------------------- */
 
 #headerContainer{
-    height: 10vh;
+    height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +25,7 @@
     position: fixed;
     width: 100vw;
     background: white;
+    z-index: 2;
 }
 
 #headerLeft{
@@ -171,9 +172,10 @@
 
 
 #aboutPage{
-    background: white;
-    height: 400vh;
-
+    background: peachpuff;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
     /* display: none; */
 }
 
@@ -204,31 +206,63 @@
 }
 
 #MonikaAboutImg{
-
-    width: 100%;
+    opacity: 0;
+    height: 20rem;
 }
 
 
 /* Events Page (Plural)----------------------------------------------------------------------------------------------- */
 #eventsPage{
     width: 100vw;
+    padding-top: 6rem;
     text-align: center;
     background-color: steelblue;
     /* background-color: lightgreen; */
 }
 
+#eventsPageBanner{
+    height: 20rem;
+    background: url("./nature3_edit.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#eventsPageBannerText{
+    color: white;
+    font-size: 5rem;
+}
+#eventsCard{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 50vw;
+}
+
+#eventsCard:hover{
+    opacity: .5;
+}
+
 #postContainer{
     display: flex;
     justify-content: center;
+    text-decoration: none;
     line-height: 1.5rem;
+    text-decoration: none;
+    color: black;
+    height: 20rem;
+
+
 }
 #innerPost{
-    width: 60vw;
+    width: 30vw;
+    height: 20rem;
     background: white;
     padding: 0rem 2rem 0 2rem;
-    margin-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-radius: .5rem;
+    /* margin-top: 2.5rem; */
+    color: black;
+    border-radius: 0 .5rem .5rem 0 ;
 }  
 
 #conatinerPictureTitle{
@@ -247,9 +281,12 @@
 }
 
 #eventImg{
+    border-radius: 1rem 0 0 1rem;
+    height: 20rem;
     /* width: 70%; */
-    width: 100%;
-    margin-bottom: 2.5rem;
+    width: 30rem;
+    object-fit: cover;
+
 }
 
 /* #eventsPageTitle{
@@ -301,8 +338,7 @@
 /* Event Page ------------------------------------------------------------------------------- */
 #eventPage{
     margin-top: 2rem;
-    margin-left: 20vw;
-    margin-right: 20vw;
+
     margin-bottom: 5rem;
 }
 
@@ -422,8 +458,10 @@
 
 /* Footer ------------------------------------------------------------------------------------------------------- */
 #footer{
+    position: relative;
     height: 5rem;
     background-color: #1EAB86; 
+    /* display: none; */
 }
 
 

@@ -92,8 +92,8 @@
                     </div>
                 </div>             
             </div>
-            <br>  <br>  <br>  <br>  <br>
-        <p>sfsdfsdff</p>
+  
+
         {% endif %}
 
         {% block about %}
@@ -176,7 +176,7 @@
 z
                  },
                 gsapPara: function() {               
-                    gsap.to('#aboutPage', {
+                    gsap.to('#MonikaAboutImg', {
                         // scrollTrigger : {
                         //     trigger: '#aboutPageTitle'
                         //     start: 'top bottom',
@@ -188,14 +188,35 @@ z
                         // duration: 3 
                         
                         scrollTrigger: {
-                            trigger: '#headerMiddle',
-                            start: "top cener",
+                            trigger: '#MonikaAboutImg',
+                            start: "-50 700",
+                            end: "center 400",
                             toggleActions: "restart pause none reset",
-                            markers: true,
+                            // markers: true,
+                            // pin: true,
+                            scrub: true,
+                
                         },
-                            x: 550,
-                            duration: 3
-                    })
+                            opacity: 1,
+                            x: 50,
+                        })
+                        // gsap.to('#MonikaAboutImg', {
+                        //     scrollTrigger: {
+                        //         trigger: '#MonikaAboutImg',
+                        //         start: "top 300",
+                        //         end: "center 250",
+                        //         toggleActions: "restart pause none reset",
+                        //         markers: true,
+                        //         pin: true,
+                        //         scrub: true,
+
+                        //     },         
+                        //         y: -20,
+                        //     })
+                },
+
+                pop: function(){
+                    console.log('lisa sucks')
                 },
 
                 currentSection: function(e, indexP) {

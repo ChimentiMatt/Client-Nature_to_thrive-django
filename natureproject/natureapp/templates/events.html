@@ -3,36 +3,41 @@
 {% block events %}
 
     <div id="eventsPage">
+        <div id="eventsPageBanner">
+            <p id="eventsPageBannerText">Upcoming Events</p>
+        </div>
         {% comment %} <p id="eventsPageTitle">UPCOMING EVENTS</p> {% endcomment %}
         {% for post in object_list %}
+            <br>  <br>  <br>
             <section id="id{{post.id}}"></section>
+
             <div id="postContainer">
-                <div id="innerPost">
-
-                    {% load static %} 
-                  
-                    <div id="conatinerPictureTitle">
-                        <p id="postTitle">{{ post.title }} </p> 
-                        
-                        <div id="dateLocation"> 
-                            <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
-                        </div>
-                        <div id="dateLocation">
-                            <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
-                        </div>
-                    </div>
-
-                    <p id="emphasize">About: </p><p id="postD">{{ post.summary }}</p>
+                <a id="eventsCard" href="{% url 'event_details' post.pk %}">  
                     <img id="eventImg" src="{{ post.image.url }}">
-                    <br>
-                    <a  id="eventButton" href="{% url 'event_details' post.pk %}">
-                        SIGN UP
-                    </a>
-                    {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
-                </div>
-            
-            </div>
+                    <div id="innerPost">
 
+                        {% load static %} 
+                    
+                        <div id="conatinerPictureTitle">
+                            <p id="postTitle">{{ post.title }} </p> 
+                            
+                            <div id="dateLocation"> 
+                                <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
+                            </div>
+                            <div id="dateLocation">
+                                <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
+                            </div>
+                        </div>
+
+                        <p id="emphasize">About: </p><p id="postD">{{ post.summary }}</p>
+
+                        <br>
+    
+                        {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
+                    </div>
+                
+                </a>
+            </div>
 
         {% endfor %}
             <div id="currentEvents">
