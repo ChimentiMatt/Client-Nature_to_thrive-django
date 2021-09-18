@@ -225,7 +225,8 @@
 #postTitle{
     font-size: 3rem;
     text-align: start;
-    margin-bottom: 2rem;
+
+    line-height:normal;
 }
 
 #eventImg{
@@ -306,6 +307,10 @@
 
 
 #eventFormContainer{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
     margin-left: 2rem;
 }
 
@@ -364,8 +369,8 @@
     display: flex;
     flex-direction: column;
     top: 8.5rem;
-    width: 15rem;
-    left: 4rem;
+    width: 12rem;
+    left: 6rem;
     text-align: start;
     background: white;
     padding: 1rem;
@@ -382,7 +387,7 @@
 }
 
 .currentEventsTitle:hover{
-    font-weight: bold;
+    opacity: .8;
 }
 
 /* Footer ------------------------------------------------------------------------------------------------------- */
@@ -390,6 +395,15 @@
     height: 5rem;
     background-color: #1EAB86; 
 }
+
+
+@media (max-width: 1400px) {
+    #currentEvents{
+        left: 1rem;
+    }
+}
+
+
 
 @media (max-width: 1000px) {
     

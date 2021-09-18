@@ -5,6 +5,7 @@
     <div id="eventsPage">
         {% comment %} <p id="eventsPageTitle">UPCOMING EVENTS</p> {% endcomment %}
         {% for post in object_list %}
+            <section id="id{{post.id}}"></section>
             <div id="postContainer">
                 <div id="innerPost">
 
@@ -39,7 +40,7 @@
                 {% for post in object_list %}
     
                         <a class="currentEventsTitle" id="section{{forloop.counter0}}" v-on:click="currentSection({{ post.id }}, {{ forloop.counter0 }})" href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a>
-         
+                        {% comment %} <a class="currentEventsTitle" id="section{{forloop.counter0}}" href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a> {% endcomment %}
                 {% endfor %}
             </div>
             <div id='cat'>cat</div>
