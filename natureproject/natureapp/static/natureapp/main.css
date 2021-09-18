@@ -10,6 +10,12 @@
   }
   
 
+/* shared styling ----------------------------------------------------------------------------------------------------------------- */
+#emphasize{
+    font-weight: bold;
+}
+
+
 /* Header Component --------------------------------------------------------------------------------------------------------------- */
 
 #headerContainer{
@@ -38,6 +44,7 @@
     font-size: 1rem;
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 #headerName:hover{
     font-weight: bold;
@@ -192,15 +199,34 @@
     width: 100vw;
     text-align: center;
     background-color: #f3f3f3;
-    min-height: 90vh;
+
 }
+
+#postContainer{
+    display: flex;
+    justify-content: center;
+    line-height: 1.5rem;
+}
+#innerPost{
+    width: 60vw;
+    background: white;
+    padding: 0rem 2rem 0 2rem;
+    margin-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-radius: 1rem 1rem;
+}  
 
 #conatinerPictureTitle{
     /* height: 5rem; */
-    height: 2rem;
-    margin-top: 2rem;
-    justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#postTitle{
+    font-size: 3rem;
+    text-align: start;
+    margin-bottom: 2rem;
 }
 
 #eventImg{
@@ -213,44 +239,24 @@
     font-size: 3rem;
 } */
 
-#postDate{
+#dateLocation{
+    display: flex;
     margin-top: .5rem;
-    margin-left: 1rem;
-    color: gray;
-}
-
-#postContainer{
-    display: flex;
-    justify-content: center;
-    line-height: 1.5rem;
 
 }
-
-#innerPost{
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    background: white;
-    padding: 0rem 2rem 0 2rem;
-    margin-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-radius: 1rem 1rem;
-}   
+ 
 #postImgContaiener{
     background: wheat;
     width: 20rem;
 }
 
-#postTitle{
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
 
 #postD{
     /* margin-top: 2rem; */
     white-space: pre-wrap;
+    text-align: start;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: .5rem;
 }
 
 #eventButton{
@@ -270,10 +276,10 @@
     margin-top: 2rem;
     margin-left: 20vw;
     margin-right: 20vw;
-
+    margin-bottom: 5rem;
 }
 
-#eventTitle{
+/* #eventTitle{
     font-size: 3rem;
     text-align: center;
 }
@@ -284,21 +290,22 @@
 #eventBody{
     margin-top: 1rem;
     white-space: pre-wrap;
-}
+} */
 
 
 
 #eventFormContainer{
-    margin-top: 2.5rem;
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-    /* background: rgb(226, 226, 226); */
+    display: flex;
+    margin-left: 2rem;
 }
 
 #eventFormInner{
     display: flex;
     /* border: 1px solid red; */
+}
+
+#eventFormRight{
+    margin-left: 1rem;
 }
 
 #formInput{
@@ -323,25 +330,22 @@
     padding: 1rem;
 }
 
-#formRight{
+/* #formRight{
     display: flex;
     flex-direction: column;
-    /* align-items: flex-end; */
     justify-content: flex-end;
-    /* flex-direction: column; */
     margin-left: 2rem;
-}
+} */
 
 #eventFormContainer button{
-    width: 43rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
     padding: 1rem;
     border: none;
     color: white;
     background-color: rgb(30, 171, 134);
     border-radius: .5rem;
     height: 5rem;
-    margin-bottom: 5rem;
-    margin-top: 2.5rem;
 }
 
 #currentEvents{
@@ -349,8 +353,8 @@
     display: flex;
     flex-direction: column;
     top: 8.5rem;
-    width: 21rem;
-    left: 2rem;
+    width: 15rem;
+    left: 4rem;
     text-align: start;
     background: white;
     padding: 1rem;
@@ -373,7 +377,7 @@
 /* Footer ------------------------------------------------------------------------------------------------------- */
 #footer{
     height: 5rem;
-    background-color: rgb(0, 66, 41); 
+    background-color: #1EAB86; 
 }
 
 @media (max-width: 1000px) {

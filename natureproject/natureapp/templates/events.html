@@ -5,25 +5,32 @@
     <div id="eventsPage">
         {% comment %} <p id="eventsPageTitle">UPCOMING EVENTS</p> {% endcomment %}
         {% for post in object_list %}
-            <section id="id{{post.id}}"></section>
             <div id="postContainer">
                 <div id="innerPost">
 
                     {% load static %} 
-                    <div>
-                        <div id="conatinerPictureTitle">
-                            <p id="postTitle">{{ post.title }} </p> 
-                            <p id="postDate">{{ post.event_date }}</p>
+                  
+                    <div id="conatinerPictureTitle">
+                        <p id="postTitle">{{ post.title }} </p> 
+                        
+                        <div id="dateLocation"> 
+                            <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
                         </div>
-                        <p id="postD">{{ post.summary }}</p>
-                        <img id="eventImg" src="{{ post.image.url }}">
-                        <br>
-                        <a  id="eventButton" href="{% url 'event_details' post.pk %}">
-                            SIGN UP
-                        </a>
-                        {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
+                        <div id="dateLocation">
+                            <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
+                        </div>
                     </div>
+
+
+                    <p id="postD">{{ post.summary }}</p>
+                    <img id="eventImg" src="{{ post.image.url }}">
+                    <br>
+                    <a  id="eventButton" href="{% url 'event_details' post.pk %}">
+                        SIGN UP
+                    </a>
+                    {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
                 </div>
+            
             </div>
 
 

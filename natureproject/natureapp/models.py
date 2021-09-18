@@ -8,6 +8,7 @@ class Post(models.Model):
     body = models.TextField()
     event_date = models.DateTimeField(default=now, blank=True)
     image = models.ImageField(upload_to='images/', default='images/cat.jpg')
+    location = models.CharField(max_length=255, default="1234 Fake Drive, Portland Oregon, 97065")
 
     def __str__(self):
         return self.title 

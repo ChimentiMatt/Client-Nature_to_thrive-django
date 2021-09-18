@@ -2,10 +2,27 @@
 
 
 {% block event_details %}
+
+
+
     <div id="eventPage">
-        <p id="eventTitle">{{ post.title }} </p> 
-        <p id="eventDate">{{ post.event_date }}</p>
-        <p id="eventBody">{{ post.body }}</p>
+        <div id="postContainer">
+            <div id="innerPost">
+                {% load static %} 
+                <div id="conatinerPictureTitle">
+                    <p id="postTitle">{{ post.title }} </p> 
+                    
+                    <div id="dateLocation"> 
+                        <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
+                    </div>
+                    <div id="dateLocation">
+                        <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
+                    </div>
+                </div>
+                <p id="postD">{{ post.body }}</p>
+            </div>
+        </div>
+
         <form id='eventFormContainer'>
             <div id='eventFormInner'>
                 <div>
@@ -16,7 +33,8 @@
                     <label id="formLabel">LAST NAME</label>
                     <br>
                     <input id="formInput"></input>
-                    <br>
+                </div>
+                <div id="eventFormRight">
                     <label id="formLabel">EMAIL</label>
                     <br>
                     <input id="formInput" type="email"></input>
@@ -25,7 +43,9 @@
                     <br>
                     <input id="formInput" type='tel'></input>
                 </div>
-                <div id="formRight">
+            </div>
+               
+                {% comment %} <div id="formRight">
                     <label id="formLabel">EVENT NAME</label>
                
                     <input id="formInput" type='tel' value="{{ post.title }}" disabled></input>
@@ -33,8 +53,7 @@
                     <label id="formLabel">DATE</label>
                
                     <input id="formInput" type='tel' value="{{ post.event_date }}" disabled></input>
-                </div>
-            </div>
+                </div> {% endcomment %}
             {% comment %} <div id="formRight">
                 <label id="formLabel">EVENT</label>
                 <input id="formInput" type='tel' value="{{ post.title }}" disabled></input>
