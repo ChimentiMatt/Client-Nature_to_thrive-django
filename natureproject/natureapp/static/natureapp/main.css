@@ -22,6 +22,9 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2rem 1rem -2rem rgb(0 0 0 / 10%);
+    position: fixed;
+    width: 100vw;
+    background: white;
 }
 
 #headerLeft{
@@ -104,21 +107,32 @@
 
 /* Landing Body ---------------------------------------------------------------------------------------------------------- */
 
+#landingContainerSpace{
+    height:100vh;
+    width: 100VW;
+}
+
 #landingContainer{
+    position: fixed;
     height: 90vh;
     width: 100VW;
+    top: 10vh;
+
     background: url("./nature3_edit.jpg");
     background-size: cover;
     text-align: center;
     color: white;
     font-size: 5rem;
+    margin-bottom: 90vh;
 }
 #landingTextContainer{
     display: flex;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 90vh;
+    width: 100vw;
 }
 
 #landingName{
@@ -157,8 +171,10 @@
 
 
 #aboutPage{
-    background: rgba(0, 0, 0, 0.05);
-    height: 100vh;
+    background: white;
+    height: 400vh;
+
+    /* display: none; */
 }
 
 
@@ -188,6 +204,7 @@
 }
 
 #MonikaAboutImg{
+
     width: 100%;
 }
 

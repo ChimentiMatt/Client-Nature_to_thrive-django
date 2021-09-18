@@ -71,27 +71,29 @@
         </div>
 
         {% if request.path == '/' %}
+            <div id="landingContainerSpace"></div>
             <div id="landingContainer">
                 <div id="landingTextContainer">
                     <p id="landingName">NATURE TO THRIVE</p>
                     <p id="landingLicensed">LICENSED ECOTHERAP</p>
-                    <p id="landingAbout">
+                    <p @click="gsap1()" id="landingAbout">
                         ABOUT MONIKA
                     </p>
                 </div>
             </div>
             <div id="aboutPage">
-                <p id="aboutPageTitle">ABOUT MONIKA</p>
+                <p  id="aboutPageTitle">ABOUT MONIKA</p>
                 <div id="aboutPageContextArea"> 
                     <div id="aboutLeft">
-                        <img id ="MonikaAboutImg" src='../static/natureapp/MonikaHeadshot.jpg'></img>
+                        <img id="MonikaAboutImg" src='../static/natureapp/MonikaHeadshot.jpg'></img>
                     </div>
                     <div id="aboutRight">
                         <p>Monika likes cats SLDKFSDLFK Sflknfsdlkf asdlf sad;fl nasf asd;lf kajsdf l;as a;jfsadasfsadf ksadkfsadf saf asdk;f hsadkjfhd skjfhasdkf sadkf jasdkfj hasdkf hasdk;f hasdkfj asdkf jasd kfjas dfk;jas df ;ksajd</p>
                     </div>
                 </div>             
             </div>
-        
+            <br>  <br>  <br>  <br>  <br>
+        <p>sfsdfsdff</p>
         {% endif %}
 
         {% block about %}
@@ -109,16 +111,18 @@
             <p>Monika Tippie</p>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
         
     <script src="https://cdn.jsdelivr.net/npm/vue2-smooth-scroll@1.5.1/dist/vue-smooth-scroll.min.js"></script>
 
     
     <script>
+        gsap.registerPlugin(ScrollTrigger);
         let cat = document.getElementById('cat')
         let app = new Vue({
             delimiters: ['[[', ']]'],
@@ -126,7 +130,6 @@
 
             data: {
                 formOpen: true,
-
                 sayHi: 'Hello from Vue!',
             },
             methods: {
@@ -134,9 +137,10 @@
                     document.getElementById('home').style.color = 'red'
                 },
                 log: function() {
-                    alert('Lisa sucks at life')
+                    // alert('Lisa sucks at life')
                 },
                 popOutForm: function() {
+
                     if (this.formOpen){
                         document.getElementById('popOutForm').style.display = 'block'
                         document.getElementById('formForegroundBlurr').style.display = 'block'
@@ -166,6 +170,34 @@
                         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                     );
                 },
+                gsap1: function () {
+                    console.log('test')
+                    gsap.to('#landingAbout', {color: 'red'}) 
+z
+                 },
+                gsapPara: function() {               
+                    gsap.to('#aboutPage', {
+                        // scrollTrigger : {
+                        //     trigger: '#aboutPageTitle'
+                        //     start: 'top bottom',
+                        //     end: "center center",
+                        //     scrub: true
+                        // },
+                        // x: 400,
+                        // rotation: 360,
+                        // duration: 3 
+                        
+                        scrollTrigger: {
+                            trigger: '#headerMiddle',
+                            start: "top cener",
+                            toggleActions: "restart pause none reset",
+                            markers: true,
+                        },
+                            x: 550,
+                            duration: 3
+                    })
+                },
+
                 currentSection: function(e, indexP) {
                     let currentPage = window.location.href
                     console.log(currentPage, 'current page')
@@ -201,17 +233,15 @@
                 }
             },
 
-            // mounted() {
-            //     log: function() {
-            //         console.log('Lisa sucks at life')
-            //     }
-            // }
         })
+        app.gsapPara()
         // app.currentSection()
-        // app.log()
+        app.log()
         // app.home()
 
     </script>
 </body>
 
 </html>
+
+  
