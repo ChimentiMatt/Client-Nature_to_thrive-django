@@ -230,7 +230,8 @@
 }
 
 #eventImg{
-    width: 70%;
+    /* width: 70%; */
+    width: 100%;
     margin-bottom: 2.5rem;
 }
 
@@ -271,6 +272,7 @@
     border-radius: .5rem;
     text-decoration: none;
     color: white;
+
 }
 #eventButton:hover{
     opacity: .8;
@@ -372,8 +374,9 @@
     width: 12rem;
     left: 6rem;
     text-align: start;
-    background: white;
     padding: 1rem;
+    /* border-top: .5px solid rgba(0, 0, 0, 0.384); */
+
 }
 
 #currentEventsHeader{
