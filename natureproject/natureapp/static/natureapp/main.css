@@ -89,7 +89,13 @@
     color: black;
     margin-right: 1rem;
 }
+#headerContainerMobile{
+    display: none;
+}
 
+#mobileDropDownMenu{
+    display: none;
+}
 
 /* Landing Body ---------------------------------------------------------------------------------------------------------- */
 
@@ -368,4 +374,94 @@
 #footer{
     height: 5rem;
     background-color: rgb(0, 66, 41); 
+}
+
+@media (max-width: 1000px) {
+    
+    /* Header ---------------------------------------------------------------------------------------------------- */
+    #headerContainer{
+        display: none;
+    }
+    #headerContainerMobile{
+        display: block;
+        display: flex;
+        align-items: center;
+        height: 5rem;
+    }
+    #headerLeftMobile{
+        height: 5rem;
+        width: 20%;
+    }
+    #logoMobile{
+        height: 100%;
+    }
+
+    #headerMiddleMobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 5rem;
+        width: 70%;
+    }
+
+    #headerNameMobile{
+        height: 5rem;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    #headerRightMobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        height: 5rem;
+    }
+
+    #mobileDropDownMenu{
+        position: absolute;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        top: 5rem;
+        z-index: 2;
+        height: 2.5rem;
+        width: 100%;
+        background: white;
+    }
+
+    #mobileDropDownLinks{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .7rem;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #mobileDropDownLinks a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Events Page ------------------------------------------------------------------------------------------------*/
+    #currentEvents{
+        display: none;
+    }
+    #postContainer{
+
+    }
+    #innerPost{
+        width: 90%;
+    }
+    #postTitle{
+        font-size: 2rem;
+    }
+
+    #postContainer{
+        padding-top: 1rem;
+    }
 }

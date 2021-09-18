@@ -18,7 +18,6 @@
             <div id="headerLeft">
                 <a href="{% url 'home' %}"><img id="logo" src='../static/natureapp/logoEdit.png'></a>
                 <a id="headerName" href="{% url 'home' %}">NATURE TO THRIVE</a>         
-
             </div>
             <div id="headerMiddle">
                 <a href="{% url 'events' %}">EVENTS</a>
@@ -33,7 +32,44 @@
                 </div>
             </div>
         </div>
-        
+
+        {% comment %} HEADER MOBILE {% endcomment %}
+        <div id="headerContainerMobile">
+     
+            <div id="headerLeftMobile">
+                <a href="{% url 'home' %}"><img id="logoMobile" src='../static/natureapp/logoEdit.png'></a>
+            </div>
+            <div id="headerMiddleMobile">
+                <div><a id="headerNameMobile" href="{% url 'home' %}">NATURE TO THRIVE</a></div>
+    
+            </div>
+            <div @click="mobileDropDownBtn()" id="headerRightMobile">
+                X
+            </div>
+
+            <div id="mobileDropDownMenu">
+                <div id="mobileDropDownLinks">
+                    <a href="{% url 'events' %}">EVENTS</a>
+                    <a href="{% url 'about' %}">OUTDOOR-ECOTHERAPY</a>
+                    <a href="{% url 'about' %}">PSYCHOTHERAPY</a>
+                    <a href="{% url 'about' %}">ABOUT</a>
+                </div>
+            </div>
+
+            {% comment %} <div >
+                <a href="{% url 'events' %}">EVENTS</a>
+                <a href="{% url 'about' %}">OUTDOOR-ECOTHERAPY</a>
+                <a href="{% url 'about' %}">PSYCHOTHERAPY</a>
+                <a href="{% url 'about' %}">ABOUT</a>
+            </div>
+            <div >
+                <div >
+                    <p>(503) 964-9999</p>
+                    <p>monikatippie@gmail.com</p>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
         {% if request.path == '/' %}
             <div id="landingContainer">
                 <div id="landingTextContainer">
@@ -55,6 +91,7 @@
                     </div>
                 </div>             
             </div>
+        
         {% endif %}
 
         {% block about %}
@@ -66,8 +103,6 @@
         {% block event_details %}
         {% endblock %}
 
-
-
         {% comment %} FOOTER SECTION{% endcomment %}
         <div id='footer'>
             <p>@ 2021 Nature To Thrive</p>
@@ -77,9 +112,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
         
-
     <script src="https://cdn.jsdelivr.net/npm/vue2-smooth-scroll@1.5.1/dist/vue-smooth-scroll.min.js"></script>
     <script>
+        let cat = document.getElementById('cat')
         let app = new Vue({
             delimiters: ['[[', ']]'],
             el: '#app',
@@ -116,8 +151,9 @@
                     console.log('yeet')
                 },
                 isInViewport: function(ele) {
-                    console.log('you made it')
+                    console.log(ele, 'you made it')
                     const rect = ele.getBoundingClientRect();
+                    console.log(rect)
                     return (
                         rect.top >= 0 &&
                         rect.left >= 0 &&
@@ -139,7 +175,7 @@
                     let domId = '#id' + idNum
                     console.log(domId, 'domId')
 
-                    if (this.isInViewport('cat')){
+                    if (this.isInViewport(cat) == true){
                         alert('cat')
                     }
                     // let x = document.getElementsByClassName('currentEventsTitle')[0].style.color = 'red'
@@ -158,6 +194,10 @@
 
                     // document.getElementById(el).style.color = 'red'
                 },
+                mobileDropDownBtn: function () {
+                    console.log('derp')
+                    document.getElementById('mobileDropDownMenu').style.display = 'flex'
+                }
 
 
             },
