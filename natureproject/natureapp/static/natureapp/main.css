@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    font-weight: lighter;
+
     box-sizing: border-box;
   }
   
@@ -19,13 +19,17 @@
 #headerContainer{
     height: 6rem;
     display: flex;
+    position: relative;
+    z-index: 1;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2rem 1rem -2rem rgb(0 0 0 / 10%);
+    /* box-shadow: 0 2rem 1rem -2rem rgb(0 0 0 / 10%); */
     position: fixed;
     width: 100vw;
-    background: white;
-    background: #659dbd;
+    /* background: #659dbd;
+    background: #274659;
+    background: white; */
+
     z-index: 2;
 }
 
@@ -41,11 +45,13 @@
     height: 8vh;
     margin-left: 1rem;
     margin-right: 1rem;
+    position: relative;
 }
 
 #headerName{
     font-size: 1rem;
     text-decoration: none;
+    color: #222222;
     color: white;
     font-weight: bold;
 }
@@ -58,9 +64,11 @@
    justify-content: space-between;
    width: 33.3%;
    text-decoration: none;
+   font-weight: bold;
 }
 #headerMiddle a {
     text-decoration: none;
+    color: #222222;
     color: white;
 }
 #headerMiddle a:hover {
@@ -81,6 +89,8 @@
     margin-top: .5rem;
     margin-right: 1.5rem;
     padding: .5rem;
+    font-weight: bold;
+    color: #222222;
     color: white;
 }
 
@@ -108,11 +118,10 @@
 
 #landingContainer{
     position: fixed;
-    height: 90vh;
+    height: 100vh;
     width: 100VW;
-    top: 10vh;
-
-    background: url("./nature3_edit.jpg");
+    top: 0vh;
+    background: url("./nature4.jpg");
     background-size: cover;
     text-align: center;
     color: white;
@@ -166,9 +175,9 @@
 
 #aboutPage{
     background: white;
-    height: 90vh;
+    height: 100vh;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     /* display: none; */
 }
 
@@ -180,7 +189,9 @@
 }
 
 #aboutPageTitle{
-    padding-top: 3rem;
+    padding-top: 10rem;
+    position: relative;
+    z-index: 5;
     margin-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
@@ -212,12 +223,14 @@
     padding-top: 6rem;
     text-align: center;
     background-color: #fbeec1;
-    background: white;
+    background: #205373;
     /* background-color: lightgreen; */
 }
 
 #eventsPageBanner{
-    height: 30rem;
+    height: 40rem;
+    position: relative;
+    top: -6rem;
     background: url("./nature3_edit.jpg");
     display: flex;
     align-items: center;
@@ -254,11 +267,13 @@
 #innerPost{
     width: 30rem;
     height: 20rem;
-    background: white;
+    background: #205373;
     padding: 0rem 2rem 0 2rem;
     /* margin-top: 2.5rem; */
     color: white;
-    background: #659dbd;
+    /* background: #205373; */
+    border: 2px solid white;
+    border-left: none;
     border-radius: 0 .5rem .5rem 0 ;
 }  
 
@@ -283,7 +298,8 @@
     /* width: 70%; */
     width: 30rem;
     object-fit: cover;
-
+    border: 2px solid white;
+    border-right: none ;
 }
 
 /* #eventsPageTitle{
@@ -489,6 +505,7 @@
         text-decoration: none;
         font-size: 1.5rem;
         color: black;
+
     }
 
     #headerRightMobile{
