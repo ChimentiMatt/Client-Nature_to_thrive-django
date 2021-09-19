@@ -88,7 +88,7 @@
                         <img id="MonikaAboutImg" src='../static/natureapp/MonikaHeadshot.jpg'></img>
                     </div>
                     <div id="aboutRight">
-                        <p>Monika likes cats SLDKFSDLFK Sflknfsdlkf asdlf sad;fl nasf asd;lf kajsdf l;as a;jfsadasfsadf ksadkfsadf saf asdk;f hsadkjfhd skjfhasdkf sadkf jasdkfj hasdkf hasdk;f hasdkfj asdkf jasd kfjas dfk;jas df ;ksajd</p>
+                        <p >Monika likes cats SLDKFSDLFK Sflknfsdlkf asdlf sad;fl nasf asd;lf kajsdf l;as a;jfsadasfsadf ksadkfsadf saf asdk;f hsadkjfhd skjfhasdkf sadkf jasdkfj hasdkf hasdk;f hasdkfj asdkf jasd kfjas dfk;jas df ;ksajd</p>
                     </div>
                 </div>             
             </div>
@@ -106,10 +106,10 @@
         {% endblock %}
 
         {% comment %} FOOTER SECTION{% endcomment %}
-        <div id='footer'>
+        <!-- <div id='footer'>
             <p>@ 2021 Nature To Thrive</p>
             <p>Monika Tippie</p>
-        </div>
+        </div> -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
@@ -173,7 +173,7 @@
                 gsap1: function () {
                     console.log('test')
                     gsap.to('#landingAbout', {color: 'red'}) 
-z
+
                  },
                 gsapPara: function() {               
                     gsap.to('#MonikaAboutImg', {
@@ -200,19 +200,19 @@ z
                             opacity: 1,
                             x: 50,
                         })
-                        // gsap.to('#MonikaAboutImg', {
-                        //     scrollTrigger: {
-                        //         trigger: '#MonikaAboutImg',
-                        //         start: "top 300",
-                        //         end: "center 250",
-                        //         toggleActions: "restart pause none reset",
-                        //         markers: true,
-                        //         pin: true,
-                        //         scrub: true,
-
-                        //     },         
-                        //         y: -20,
-                        //     })
+                        gsap.to('#aboutRight', {
+                            scrollTrigger: {
+                                trigger: '#aboutRight',
+                                start: "-200 center",
+                                end: "-100  center",
+                                toggleActions: "restart pause none reset",
+                                // markers: true,
+                                // pin: true,
+                                scrub: true,
+                            },         
+                            opacity: 1,
+                            x: -150,
+                            })
                 },
 
                 pop: function(){

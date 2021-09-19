@@ -25,6 +25,7 @@
     position: fixed;
     width: 100vw;
     background: white;
+    background: #659dbd;
     z-index: 2;
 }
 
@@ -33,7 +34,7 @@
     align-items: center;
     width: 33.3%;
     text-decoration: none;
-    color: black;
+
 }
 
 #logo{
@@ -45,7 +46,7 @@
 #headerName{
     font-size: 1rem;
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 #headerName:hover{
@@ -60,16 +61,10 @@
 }
 #headerMiddle a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 #headerMiddle a:hover {
     font-weight: bold;
-}
-
-.headerLinks{
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
 }
 
 #headerCenter{
@@ -86,6 +81,7 @@
     margin-top: .5rem;
     margin-right: 1.5rem;
     padding: .5rem;
+    color: white;
 }
 
 #headerRightPhone p{
@@ -93,11 +89,8 @@
     padding: .2rem;
 }
 
-.headerLinksRight{
-    text-decoration: none;
-    color: black;
-    margin-right: 1rem;
-}
+
+
 #headerContainerMobile{
     display: none;
 }
@@ -172,7 +165,7 @@
 
 
 #aboutPage{
-    background: peachpuff;
+    background: white;
     height: 90vh;
     position: relative;
     z-index: 1;
@@ -191,6 +184,7 @@
     margin-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
+    color: #3b945e;
 }
 #aboutLeft{
     width: 49%;
@@ -203,11 +197,12 @@
     width: 49%;
     margin-left: 1%;
     margin-top: 3rem;
+    opacity: 0;
 }
 
 #MonikaAboutImg{
     opacity: 0;
-    height: 20rem;
+    height: 30rem;
 }
 
 
@@ -216,12 +211,13 @@
     width: 100vw;
     padding-top: 6rem;
     text-align: center;
-    background-color: steelblue;
+    background-color: #fbeec1;
+    background: white;
     /* background-color: lightgreen; */
 }
 
 #eventsPageBanner{
-    height: 20rem;
+    height: 30rem;
     background: url("./nature3_edit.jpg");
     display: flex;
     align-items: center;
@@ -241,7 +237,7 @@
 }
 
 #eventsCard:hover{
-    opacity: .5;
+    opacity: .9;
 }
 
 #postContainer{
@@ -256,12 +252,13 @@
 
 }
 #innerPost{
-    width: 30vw;
+    width: 30rem;
     height: 20rem;
     background: white;
     padding: 0rem 2rem 0 2rem;
     /* margin-top: 2.5rem; */
-    color: black;
+    color: white;
+    background: #659dbd;
     border-radius: 0 .5rem .5rem 0 ;
 }  
 
@@ -337,9 +334,15 @@
 
 /* Event Page ------------------------------------------------------------------------------- */
 #eventPage{
-    margin-top: 2rem;
-
     margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#innerPostEvent{
+    padding-top: 6rem;
+    width: 60vw;
 }
 
 #eventPageBackBtn{
@@ -348,26 +351,10 @@
     color: black;
     text-decoration: none;
 }
-/* #eventTitle{
-    font-size: 3rem;
-    text-align: center;
-}
-
-#eventDate{
-    text-align: center;
-}
-#eventBody{
-    margin-top: 1rem;
-    white-space: pre-wrap;
-} */
-
 
 
 #eventFormContainer{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+
     margin-left: 2rem;
 }
 
@@ -402,13 +389,6 @@
     padding: 1rem;
 }
 
-/* #formRight{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-left: 2rem;
-} */
-
 #eventFormContainer button{
 
 
@@ -424,6 +404,7 @@
 #currentEvents{
     position: fixed;
     display: flex;
+    display: none;
     flex-direction: column;
     top: 8.5rem;
     max-width: 18rem;
@@ -484,6 +465,7 @@
         display: flex;
         align-items: center;
         height: 5rem;
+
     }
     #headerLeftMobile{
         height: 5rem;
