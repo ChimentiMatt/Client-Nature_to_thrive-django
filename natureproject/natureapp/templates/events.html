@@ -40,11 +40,15 @@
 
         {% endfor %}
             <div id="currentEvents">
-                <p id="currentEventsHeader">EVENTS</p>
+                <p id="currentEventsHeader">UPCOMING EVENTS</p>
                 {% for post in object_list %}
     
                         {% comment %} <a class="currentEventsTitle" id="section{{forloop.counter0}}" v-on:click="currentSection({{ post.id }}, {{ forloop.counter0 }})" href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a> {% endcomment %}
-                        <a class="currentEventsTitle" id="section{{forloop.counter0}}" href="#id{{post.id}}" v-smooth-scroll>{{ post.title }}</a>
+                        <a class="currentEventsTitle" id="section
+                            {{forloop.counter0}}" href="#id{{post.id}}" 
+                            v-smooth-scroll="{offset: -120}">
+                            {{ post.title }}
+                        </a>
                 {% endfor %}
             </div>
             <div id='cat'>cat</div>
