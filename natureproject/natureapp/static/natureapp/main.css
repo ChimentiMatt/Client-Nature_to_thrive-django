@@ -286,15 +286,16 @@
 
 
 #conatinerPictureTitle{
-    border-left: .2rem solid rgb(163, 163, 163);
+    /* border-left: .2rem solid rgb(163, 163, 163); */
     padding-left: 1rem;
     /* margin-top: 1rem; */
     width: 100%;
 }
 
 #postTitle{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: start;
+    /* color: gray; */
     margin-bottom: 1rem;
 }
 
@@ -336,6 +337,7 @@
 #postD{
     white-space: pre-wrap;
     text-align: start;
+    color: gray;
 }
 
 #eventButton{

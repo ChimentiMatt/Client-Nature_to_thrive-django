@@ -18,22 +18,19 @@
                     <div id="innerPost">
 
                         {% load static %} 
-                    
+                
                         <div id="conatinerPictureTitle">
                             <p id="postTitle">{{ post.title }} </p> 
-                            
-                        <p id="postD">{{ post.summary }}</p>
+                        
+                            <p id="postD">{{ post.summary }}</p>
                             {% comment %} <div id="dateLocation"> 
                                 <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
                             </div> {% endcomment %}
                         </div>
-                   
-                            <div id="dateLocation">
-                                <p id="">{{ post.event_date }}</p>
-                            </div>
-
-             
-
+                    
+                        <div id="dateLocation">
+                            <p id="">{{ post.event_date }}</p>
+                        </div>
                         {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
                     </div>
                     
