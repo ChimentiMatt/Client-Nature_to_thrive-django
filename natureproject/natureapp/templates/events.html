@@ -12,7 +12,8 @@
             <section id="id{{post.id}}"></section>
 
             <div id="postContainer">
-                <a id="eventsCard" href="{% url 'event_details' post.pk %}">  
+                <div id="eventsCard">
+                    <a href="{% url 'event_details' post.pk %}">  
                     <img id="eventImg" src="{{ post.image.url }}">
                     <div id="innerPost">
 
@@ -21,22 +22,23 @@
                         <div id="conatinerPictureTitle">
                             <p id="postTitle">{{ post.title }} </p> 
                             
-                            <div id="dateLocation"> 
+                        <p id="postD">{{ post.summary }}</p>
+                            {% comment %} <div id="dateLocation"> 
                                 <p id="emphasize">Location: </p><p id="">{{ post.location }}</p>
-                            </div>
+                            </div> {% endcomment %}
+                        </div>
+                   
                             <div id="dateLocation">
                                 <p id="emphasize">Date: </p><p id="">{{ post.event_date }}</p>
                             </div>
-                        </div>
 
-                        <p id="postD">{{ post.summary }}</p>
+             
 
-                        <br>
-    
                         {% comment %} <button v-on:click="popOutForm()">Submit</button> {% endcomment %}
                     </div>
-                
-                </a>
+                    
+                    </a>
+                </div>
             </div>
 
         {% endfor %}

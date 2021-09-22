@@ -222,8 +222,9 @@
     width: 100vw;
     padding-top: 6rem;
     text-align: center;
-    background-color: #fbeec1;
-    background: #205373;
+    background-color: rgb(235, 235, 235);
+    /* background-color: #fbeec1; */
+    /* background: #205373; */
     /* background-color: lightgreen; */
 }
 
@@ -241,14 +242,19 @@
     color: white;
     font-size: 5rem;
 }
+
 #eventsCard{
-    text-decoration: none;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-decoration: none;
     padding: 0;
-
+    text-align: center;
 }
-
+#eventsCard a {
+    text-decoration: none;
+}
 #eventsCard:hover{
     opacity: .9;
 }
@@ -259,37 +265,43 @@
 }
 
 #innerPost{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    height: 12.5rem;
+    padding: 0rem 1rem 0 1rem;
+    color: black;
+    padding-top: 2rem;
+    background-color: white;
     width: 40rem;
-    background: #205373;
-    padding: 0rem 2rem 0 2rem;
-    /* margin-top: 2.5rem; */
-    color: white;
-    /* background: #205373; */
-    border: 2px solid white;
-    border-left: none;
-    border-radius: 0 .5rem .5rem 0 ;
 }  
 
+
+
 #conatinerPictureTitle{
-    align-items: center;
-    text-align: center;
-    margin-top: 1.5rem;
-    margin-bottom: .5rem;
+    border-left: .2rem solid rgb(163, 163, 163);
+    padding-left: 1rem;
+    /* margin-top: 1rem; */
+    width: 100%;
 }
 
 #postTitle{
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: start;
-    line-height:normal;
+    margin-bottom: 1rem;
 }
 
 #eventImg{
-    border-radius: 1rem 0 0 1rem;
-    height: 20rem;
+    /* border-radius: 1rem 0 0 1rem; */
+    position: relative;
+    z-index: 1;
     /* width: 70%; */
-    width: 30rem;
+    width: 40rem;
+    height: 20rem;
     object-fit: cover;
-    border: 2px solid white;
     border-right: none ;
 }
 
@@ -298,16 +310,21 @@
     font-size: 3rem;
 } */
 
-#emphasize{
+/* #emphasize{
     font-weight: bold;
     width: 5rem;
     text-align: start;
     margin-right: 1rem;
-}
+} */
 
 #dateLocation{
+    width: 100%;
+
+    margin-left: 2rem;
     display: flex;
-    margin-top: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: rgb(119, 119, 119);
 }
  
 #postImgContaiener{
@@ -317,17 +334,12 @@
 
 
 #postD{
-
     white-space: pre-wrap;
     text-align: start;
-    margin-bottom: 2rem;
-    margin-top: .5rem;
-    margin-top: 2rem;
 }
 
 #eventButton{
     padding: 1rem 2rem 1rem 2rem;
-
     background: #1EAB86;
     border-radius: .5rem;
     text-decoration: none;
@@ -535,15 +547,15 @@
         color: black;
     }
 
-    /* Events Page ------------------------------------------------------------------------------------------------*/
     #currentEvents{
         display: none;
     }
     #innerPost{
-        width: 90%;
+
     }
     #postTitle{
         font-size: 2rem;
+
     }
     #postContainer{
         padding-top: 1rem;
