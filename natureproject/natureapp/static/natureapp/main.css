@@ -143,12 +143,14 @@
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #222222;
 }
 
 #landingLicensed{
     font-size: 2rem;
     margin-bottom: 1rem;
-    font-weight: bold
+    font-weight: bold;
+    color: #222222;
 }
 
 #landingAbout{
@@ -160,9 +162,9 @@
     border-radius: .2rem .2rem .2rem .2rem;
     text-decoration: none;
     color: white;
-
+    color: #222222;
     font-weight: bold;
-    border: 1px solid white;
+    border: 1px solid #222222;
 }
 
 #landingAbout:hover{
@@ -444,6 +446,7 @@
     border-radius:  0 .5rem .5rem 0 ;
     padding-left: 1rem;
     /* margin-right: 1rem; */
+    margin-top: 2.5rem;
 }
 
 #currentEventsHeader{
